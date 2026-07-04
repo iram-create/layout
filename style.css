@@ -1,14 +1,18 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("bc.jpg") top center ;
+  background: url("bc.jpg") top center no-repeat;
   background-size: 100% auto;
   background-color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 28px;
+  font-size: clamp(16px, 2vw, 28px);
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .first {
   background: transparent;
 
@@ -23,12 +27,13 @@ body {
   justify-content: center;
 }
 h1 {
-  font-size: 40px;
+  font-size: clamp(28px, 5vw, 40px);
   margin: 0;
   line-height: 1.2;
 }
 
 p {
+  font-size: clamp(16px, 3vw, 30px);
   font-size: 30px;
   margin-top: 8px;
   margin-bottom: 0;
@@ -40,7 +45,15 @@ p {
   display: flex;
   gap: 12px;
 }
-
+.lef,
+.ss,
+.ws,
+.fir,
+.ii,
+.lii {
+  max-width: 100%;
+  height: auto;
+}
 .ii {
   margin-top: 20px;
   width: 200px;
@@ -110,4 +123,64 @@ a {
   margin-top: 10px;
   width: 200px;
   height: 100px;
+}
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media (max-width: 768px) {
+  .first,
+  .second {
+    grid-template-columns: 1fr;
+  }
+
+  .left,
+  .nextright,
+  .thirdleft {
+    height: auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .lef {
+    width: 80%;
+    margin: auto;
+  }
+
+  .ss {
+    width: 60%;
+  }
+
+  .ws {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .logos,
+  .row {
+    /* flex-direction: column; */
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ii,
+  .lii {
+    width: 180px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  h2,
+  h3 {
+    padding: 0 15px;
+    text-align: center;
+  }
 }
