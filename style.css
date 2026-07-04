@@ -5,6 +5,8 @@ body {
   background-size: 100% auto;
   background-color: #fff;
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 28px;
 }
 
 .first {
@@ -91,6 +93,11 @@ p {
   line-height: 1.2;
   text-align: center;
 }
+a {
+  color: rgb(122, 122, 233);
+  font-family: "Roboto";
+  text-decoration: none;
+}
 .row {
   display: flex;
 
@@ -101,6 +108,6 @@ p {
 }
 .lii {
   margin-top: 10px;
-  width: 250px;
+  width: 200px;
   height: 100px;
 }
